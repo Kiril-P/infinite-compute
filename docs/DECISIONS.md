@@ -4,12 +4,12 @@ Material decisions are append-only. A later decision may supersede an earlier on
 
 ## D-001 — Computer-first perspective
 
-**Status:** Accepted  
+**Status:** Accepted
 **Decision:** There is no player avatar or player-character emphasis. The computer and its changing environment are the subject of the story.
 
 ## D-002 — Narrative and tone arc
 
-**Status:** Accepted  
+**Status:** Accepted
 **Decision:** Begin as a cozy computer experience, escalate through obsessive optimization and hectic complexity, then enter absurd science fiction. Satirize the technology industry throughout and retain an emotionally sincere undertone.
 
 ## D-003 — Core economy
@@ -56,3 +56,13 @@ Material decisions are append-only. A later decision may supersede an earlier on
 
 **Status:** Accepted provisionally  
 **Decision:** Use React, TypeScript, and Vite with a framework-independent simulation engine, versioned local saves, Vitest, and Playwright. Revisit only if scaffolding reveals a concrete incompatibility. The simulation seam and trade-off are recorded in `docs/adr/0001-framework-independent-simulation.md`.
+
+## D-012 — Era control-compression pattern
+
+**Status:** Accepted
+**Decision:** Each Era follows “perform, understand, automate, configure, compress, then face a new decision.” A deterministic Benchmark concludes the Era by temporarily changing one familiar rule, diagnosing the limiting Bottleneck, and awarding related permanent relief. This applies the strongest shared lessons from Magic Research 2 and Antimatter Dimensions without adding prestige to v1.
+
+## D-013 — Reversible Research and automation configuration
+
+**Status:** Accepted
+**Decision:** Research introduces a small reversible configuration with no permanently exclusive nodes. Task Manager automation matures from auto-run to queue policy to operations policy, preserves configured intent before capacity exists, and gains a small set of named Operating Profiles.

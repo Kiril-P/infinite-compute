@@ -12,6 +12,14 @@ _Avoid_: Level, world, zone
 A one-time milestone that advances the computer into the next Era and visibly transforms its environment.
 _Avoid_: Prestige, reset, ascension
 
+**Current Objective**:
+The single pinned critical-path goal that names the next meaningful outcome and its exact requirements.
+_Avoid_: Quest log, tutorial checklist
+
+**Benchmark**:
+A deterministic Era gate that temporarily changes one familiar rule, tests the current systems, diagnoses the limiting factor, and awards a related permanent capability.
+_Avoid_: Boss, random event, minigame
+
 **Impossible Question**:
 The unresolved question about existence that motivates the computer's long-term pursuit of infinite computing power.
 _Avoid_: Final quest, win condition
@@ -52,6 +60,10 @@ _Avoid_: Clicker, manual grind, minigame
 A system that performs a previously learned repetitive action and establishes reliable baseline progress.
 _Avoid_: Autoclicker, idle mode
 
+**Operating Profile**:
+A saved, reversible collection of Job priorities and automation policies used to emphasize throughput, Research, or active bursts.
+_Avoid_: Build class, permanent specialization
+
 **Incident**:
 A brief, legible disruption with a cause, effect, and recovery that changes efficiency without destroying progress.
 _Avoid_: Disaster, random failure
@@ -83,4 +95,3 @@ _Avoid_: Dialogue, lore dump
 **System Message**:
 A short statement from the Operating System about its state, observations, or developing understanding.
 _Avoid_: Announcement, narrator caption
-

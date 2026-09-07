@@ -24,10 +24,14 @@ A desktop-browser incremental game presented entirely as a fictional operating s
 - Created a phased roadmap with acceptance criteria.
 - Added root repository instructions for future Codex tasks.
 - Installed a focused Matt Pocock engineering skill set for use from the next turn.
+- Configured Matt Pocock's engineering skills to use committed local Markdown issues under `.scratch/`, default triage roles, and the repository's single domain context.
+- Added the accepted v1 specification and seven blocked tracer-bullet tickets under `.scratch/v1/`.
+- Researched Magic Research 2 and Antimatter Dimensions against first-party mechanics and labeled community reception evidence.
+- Incorporated component breakpoints, Current Objective, configurable Automation, reversible Research, Era Benchmarks, visible control compression, contextual help, and an interface-driven finale into the canonical design.
 
 ## Next task
 
-Execute **Phase 0: Repository scaffold** from `docs/ROADMAP.md`.
+Execute `.scratch/v1/issues/01-repository-scaffold.md`, which implements **Phase 0: Repository scaffold** from `docs/ROADMAP.md`.
 
 Recommended exact task statement:
 
@@ -40,7 +44,6 @@ Recommended exact task statement:
 - Final parody company names.
 - Final balance constants and exact v1 job list.
 - Whether the first timing interaction uses one moving target or a small rhythm sequence; prototype both only if a quick comparison is inexpensive.
-- Issue tracker choice for Matt Pocock's ticket workflow; local Markdown is recommended until a remote exists.
 
 These unknowns do not block Phase 0 or the first vertical slice.
 

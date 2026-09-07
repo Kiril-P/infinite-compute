@@ -11,6 +11,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 - Create the proposed source layout without speculative empty modules.
 - Add CI-ready scripts: `dev`, `build`, `typecheck`, `lint`, `test`, and `test:e2e`.
 - Add a minimal OS shell and smoke test.
+- Add shared Current Objective, global status, and application-focus seams using placeholder content.
 
 ### Acceptance
 
@@ -25,6 +26,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 
 - Implement deterministic clock, `GameState`, command path, and selectors.
 - Create the beige OS shell, Job Runner, timing interaction, Cash, first job, and first CPU/RAM purchases.
+- Add visible component breakpoints and the first contextual Help Center entry.
 - Add visual and synthesized audio feedback.
 - Add save schema v1, autosave, reset, and development time controls.
 
@@ -33,6 +35,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 - First-time player understands the interaction without instructions beyond one sentence.
 - First purchase is reachable in 20-40 seconds.
 - Clicking rapidly provides no advantage over accurate timing.
+- The Current Objective states exact requirements and focuses the relevant application.
 - Economy tests use a fake clock and fixed seed.
 - Reload restores the exact meaningful state.
 
@@ -41,9 +44,11 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 ### Work
 
 - Add Task Manager and automated job processing.
+- Add auto-run, its visible next-action/waiting state, and the Safe Mode Payroll Benchmark.
 - Add storage, software, GPU, and cooling in an unfolding order.
 - Add named upgrades, tooltips, announcements, achievements, and first environment transformation.
 - Add Batch Queue active interaction or a simplified v1 version.
+- Add the Memory Pressure Test, queue policy, and visible compression of the opening Job.
 
 ### Acceptance
 
@@ -57,8 +62,10 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 ### Work
 
 - Add Research currency and Research Lab.
+- Add the small reversible Research configuration and initial Operating Profiles.
 - Implement spare-compute research generation and milestone research rewards.
 - Add power, overclocking, thermal inefficiency, Thermal Window interaction, and workstation jobs.
+- Add the Heat Soak Certification and automatic fan-curve reward.
 - Expand the OS narrator's personality and industry satire.
 
 ### Acceptance
@@ -73,6 +80,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 ### Work
 
 - Add the first rack transition, Network app, bandwidth, remote jobs, and Packet Route interaction.
+- Add the Brownout Drill and operations-policy controls.
 - Add brief grid/network incidents and questionable-upgrade consequences.
 - Introduce stronger automation summaries so interface complexity remains manageable.
 
@@ -88,6 +96,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 ### Work
 
 - Add facility, grid, rack expansion, late hardware tiers, and final research chain.
+- Add the final Packet Loss Audit/integrated Benchmark and interface-driven ending state.
 - Implement Incident Console, controlled-chaos presentation, and final benchmark sequence.
 - Complete v1 announcement, achievement, job, and upgrade content.
 - Add credits/about and an explicit “v1 complete” continuation state.
@@ -113,6 +122,7 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 
 - All automated checks pass.
 - No progression blocker appears across representative purchase orders.
+- No critical-path purchase order or Benchmark solution requires an external guide.
 - Reload, import, migration, and reset are verified.
 - No required interaction depends on sound, color alone, or rapid clicking.
 - The repository continuity document describes any known limitations.
@@ -125,4 +135,3 @@ Build in vertical slices. A phase is complete only when its acceptance criteria 
 - Planetary, stellar, and cosmic computing
 - Multiple interacting reset layers
 - The ultimate question and answer reveal
-

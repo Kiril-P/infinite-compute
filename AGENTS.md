@@ -34,6 +34,20 @@ When sources disagree, precedence is: latest explicit user instruction, accepted
 - Add a dependency only when its leverage exceeds the new maintenance surface.
 - Preserve unrelated user changes.
 
+## Agent skills
+
+### Issue tracker
+
+Issues and specs use local Markdown under `.scratch/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Local issue status uses the five canonical Matt Pocock triage roles. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repository with `CONTEXT.md` and system ADRs under `docs/adr/`. See `docs/agents/domain.md`.
+
 ## Product invariants
 
 - Active play rewards timing or decisions, never action frequency.
@@ -46,4 +60,3 @@ When sources disagree, precedence is: latest explicit user instruction, accepted
 ## Completion
 
 A task is complete when its roadmap acceptance criteria pass, affected automated checks pass, important visual behavior is manually verified, canonical docs match behavior, and `docs/CONTINUITY.md` names the verified state and exact next task. If context, usage, approval, or an external failure interrupts work, create the same continuity checkpoint before ending.
-

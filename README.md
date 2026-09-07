@@ -15,6 +15,7 @@ Start with:
 3. [docs/CONTINUITY.md](docs/CONTINUITY.md) for the current handoff and next task.
 4. [docs/PRODUCT.md](docs/PRODUCT.md) for the product contract.
 5. [docs/ROADMAP.md](docs/ROADMAP.md) for implementation order and acceptance criteria.
+6. [.scratch/v1/spec.md](.scratch/v1/spec.md) for the local agent-ready specification and ticket graph.
 
 ## Planned stack
 
@@ -37,6 +38,8 @@ There is no backend, account system, multiplayer, mobile layout, prestige layer,
 - [Technical design](docs/TECHNICAL_DESIGN.md)
 - [Implementation roadmap](docs/ROADMAP.md)
 - [Research notes](docs/RESEARCH.md)
+- [Magic Research 2 study](docs/research/MAGIC_RESEARCH_2.md)
+- [Antimatter Dimensions study](docs/research/ANTIMATTER_DIMENSIONS.md)
 - [Decision log](docs/DECISIONS.md)
 - [Architecture decisions](docs/adr/)
 - [Continuity handoff](docs/CONTINUITY.md)

@@ -105,7 +105,9 @@ Requirements:
 
 ## Content model
 
-Jobs, hardware, upgrades, research, achievements, announcements, and era transitions should have stable IDs and typed definitions. Requirements and effects should be composable, inspectable, and testable. Narrative content must be selectable by explicit triggers, not scattered `if` statements in components.
+Jobs, hardware, breakpoints, upgrades, Research, Benchmarks, Current Objectives, achievements, announcements, and Era Transitions have stable IDs and typed definitions. Requirements, temporary rules, rewards, and effects are composable, inspectable, and testable. Narrative content is selected by explicit triggers, not scattered `if` statements in components.
+
+Automation policies are saved domain state. A rule retains its configured intent when inactive and exposes a structured waiting reason. Operating Profiles reference validated policy values rather than arbitrary executable code.
 
 ## OS interface
 
@@ -114,6 +116,8 @@ Jobs, hardware, upgrades, research, achievements, announcements, and era transit
 - A later window manager should be able to wrap the same contents.
 - Support a target viewport of at least 1280x720; optimize primarily for 1440x900 and larger.
 - Preserve legibility during late-game chaos using hierarchy, grouping, reduced-motion support, and automation summaries.
+- Keep Current Objective, Cash, effective Compute, active Bottleneck, and the next relevant action globally visible.
+- Application requirements and Help Center entries focus the relevant application through a typed navigation command.
 
 ## Audio
 
@@ -144,6 +148,10 @@ Jobs, hardware, upgrades, research, achievements, announcements, and era transit
 - Seeded event selection and cooldowns
 - Number formatting edge cases
 - Save round trips and every migration
+- Hardware breakpoint boundaries
+- Automation intent, execution, and waiting reasons
+- Operating Profile application and Research respec conservation
+- Benchmark temporary rules, exit/retry, diagnosis, and permanent rewards
 
 ### Content validation tests
 
@@ -152,6 +160,9 @@ Jobs, hardware, upgrades, research, achievements, announcements, and era transit
 - No required progression depends on random content.
 - Story-critical announcements are non-repeatable.
 - Prices, rewards, and rates are finite and non-negative.
+- Every Era has a reachable Benchmark and every Benchmark reward addresses its tested rule.
+- Secret achievements have no economy effect.
+- Every Current Objective requirement links to an existing application or action.
 
 ### Browser tests
 
@@ -165,4 +176,3 @@ Jobs, hardware, upgrades, research, achievements, announcements, and era transit
 ### Manual visual QA
 
 Verify the opening, every era transformation, late-game dense state, dialogs, reduced motion, muted audio, and 1280x720 viewport. Screenshot comparisons may be added once the visual language stabilizes.
-

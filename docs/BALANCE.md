@@ -15,6 +15,17 @@ Target: a first-time attentive player reaches the v1 ending in 55-75 minutes. An
 | 30-45 min | Server rack | Power and network become meaningful | Rack and remote jobs |
 | 45-60+ min | Data center | Controlled multi-system chaos | Final facility and benchmark |
 
+Each Era introduces one decision layer and compresses one mastered layer:
+
+| Time | New control | Retired or compressed control |
+| --- | --- | --- |
+| 0-3 min | Clock Cycle and component breakpoints | None |
+| 3-8 min | Auto-run and one queue option | Repeating the first Job |
+| 8-18 min | First Benchmark and Batch Queue | Routine timing Jobs |
+| 18-30 min | Reversible Research and Thermal Window | Early Job selection |
+| 30-45 min | Power/network policies | Home-PC Jobs become batches/status tiles |
+| 45-60+ min | Incident oversight and final readiness | Most ordinary operations |
+
 ## Cadence targets
 
 - Initial action understood: under 20 seconds.
@@ -23,6 +34,8 @@ Target: a first-time attentive player reaches the v1 ending in 55-75 minutes. An
 - New unlock, meaningful purchase, story beat, or strong visual change: every 45-120 seconds.
 - A save should survive reload from the first minute onward.
 - A wall longer than three minutes requires either an active opportunity or visible near-term goal.
+- Every repeatable Hardware Category exposes its next authored breakpoint.
+- Every Era Benchmark attempt lasts seconds to a few minutes and immediately explains failure.
 
 ## Economy shape
 
@@ -62,6 +75,8 @@ Active value should come from accuracy, selection, and temporary boosts, not act
 - First Research purchase should occur within two minutes of the unlock.
 - Early research choices may be bought in different orders but none are permanently exclusive.
 - Every required era transition must have a clear checklist and progress indicator.
+- Keep v1 Research to approximately 8-12 nodes and no more than two branch points.
+- Respec is free or cooldown-based and never destroys spent Research.
 
 ## Catch-up and anti-stall rules
 
@@ -83,4 +98,3 @@ Development builds should record locally:
 - Ending time
 
 Provide a development-only way to export the session trace as JSON. Do not collect or transmit analytics.
-
