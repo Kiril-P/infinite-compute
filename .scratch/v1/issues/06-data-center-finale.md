@@ -2,6 +2,7 @@
 
 Type: task
 Status: ready-for-agent
+Execution: not-started
 Blocked by: 05
 
 ## Outcome
@@ -16,3 +17,5 @@ Complete facility/rack/grid expansion, late hardware, final Research chain, cont
 - Continued play remains stable after control returns.
 
 ## Comments
+
+Planning audit, 2026-09-07: supersedes the originating effectively-zero-progress description. The V1 Ending exposes an undefined completion estimate because the inherited question is unspecified. Packet Loss Audit is the single Era Benchmark; a subsequent calculation demonstrates earned capability and withholds 42. Persist/recover presentation phases and provide replay without duplicate rewards.

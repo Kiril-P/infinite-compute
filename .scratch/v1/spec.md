@@ -4,7 +4,7 @@ Status: accepted
 
 ## Outcome
 
-Deliver the roughly 60-minute desktop-browser vertical slice defined by [the product brief](../../docs/PRODUCT.md). A beige family PC earns Cash from timing-based Jobs, gains configurable Automation and Research, learns to manage hardware Bottlenecks, and completes five deterministic Benchmarks before becoming a data-center supercomputer. The Operating System narrates the journey and ends by recognizing that its Compute is effectively zero relative to the Impossible Question.
+Deliver the roughly 60-minute desktop-browser vertical slice defined by [the product brief](../../docs/PRODUCT.md). A beige family PC earns Cash from timing-based Jobs, gains configurable Automation and Research, learns to manage hardware Bottlenecks, and completes five deterministic Benchmarks across its growth into a data-center supercomputer. The Operating System narrates the journey and ends by finding that completion cannot be estimated for the inherited, unspecified Impossible Question. This is Chapter I of the full campaign planned in the product documents; it establishes the quest and withholds 42.
 
 ## Canonical context
 
@@ -26,8 +26,10 @@ Exercise economy and progression through one framework-independent simulation in
 - Each Benchmark changes one known rule, explains the current Bottleneck, supports exit/retry, and awards related permanent relief.
 - First Automation appears in 3-5 minutes; Research appears around 18-22 minutes; completion occurs in 55-75 minutes for a baseline first run.
 - The Operating System, computer, room, applications, soundscape, and announcements visibly transform across all five Eras.
+- The inherited directive, one essential normal-play beat per Era, and a small playable satire chain establish the quest before the V1 Ending.
+- The opening slice owns Safe Mode Payroll and auto-run; later slices extend that capability. All required Benchmarks support accessible configuration decisions.
 - Saves are versioned and recoverable; deterministic tests cover economy, progression, content integrity, Automation, Benchmarks, and persistence.
 
 ## Ticket order
 
-Tickets are tracer-bullet slices under `issues/`. Their `Blocked by` edges define execution order. Implement the first unblocked `ready-for-agent` ticket and update `docs/CONTINUITY.md` after each one.
+Tickets are tracer-bullet slices under `issues/`. Their `Blocked by` edges define execution order. Follow [the build loop](../../docs/agents/build-loop.md): select an authorized, unblocked `ready-for-agent` ticket whose `Execution` is not complete, verify its dependencies and resume condition, and update its checkpoint and `docs/CONTINUITY.md` at each handoff. Current authorization covers all v1 tickets through 07 / Phase 6 under D-025; Phase 0 is verified, so continue from ticket 02 and stop at verified v1 completion. Resolved planning-audit comments on tickets supersede conflicting originating descriptions.

@@ -1,0 +1,181 @@
+.machine-visual {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+.pc-cable {
+  fill: none;
+  stroke: #4b5546;
+  stroke-width: 3;
+}
+.pc-terminal {
+  font-family: var(--mono);
+}
+.pc-cursor {
+  animation: terminal-cursor 1.8s steps(1) infinite;
+}
+.pc-fan {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: standby-fan 3s linear infinite;
+}
+.pc-case-cover {
+  opacity: 1;
+  transform: translate(0, 0);
+  transition:
+    transform 420ms ease,
+    opacity 260ms ease;
+}
+.machine-visual:not([data-view='desktop']) .pc-case-cover {
+  opacity: 0;
+  transform: translate(24px, -14px);
+  pointer-events: none;
+}
+.pc-cpu,
+.pc-ram {
+  transition:
+    filter 180ms ease,
+    transform 220ms ease;
+}
+.machine-visual[data-view='cpu'] .pc-cpu,
+.machine-visual[data-view='cpu'] .pc-cpu > rect,
+.machine-visual[data-view='ram'] .pc-ram > g > rect:first-child {
+  stroke: #efd090;
+  stroke-width: 3;
+}
+.machine-visual[data-view='ram'] .pc-ram {
+  filter: drop-shadow(0 0 3px #e8c57a);
+}
+.machine-visual[data-view='ram'] .pc-ram {
+  transform: translateY(-5px);
+}
+.machine-visual--detail {
+  padding: 8px;
+}
+.machine-inspector {
+  flex: 1;
+  min-height: 65px;
+  position: relative;
+  margin-block: 4px;
+  background: #18271f;
+  border: 1px solid #3d5143;
+  overflow: hidden;
+}
+.inspection-caption {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  font-size: 9px;
+  color: var(--amber);
+  pointer-events: none;
+}
+.hardware-list dt button {
+  padding: 4px 6px;
+  margin-left: -6px;
+  border: 1px solid transparent;
+  color: inherit;
+  background: none;
+  font-size: inherit;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.hardware-list dt button::before {
+  content: '+';
+  color: var(--muted);
+}
+.hardware-list dt button[aria-pressed='true'] {
+  color: var(--amber);
+  border-color: #806e48;
+}
+.hardware-list dt button[aria-pressed='true']::before {
+  content: '−';
+  color: var(--amber);
+}
+.hardware-list dt button:hover {
+  background: #344b36;
+}
+.taskbar .motion-toggle {
+  margin-left: auto;
+  white-space: nowrap;
+  padding: 7px;
+  font-size: 8px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+.taskbar .motion-toggle[aria-pressed='true'] {
+  color: var(--amber);
+  border-color: var(--amber);
+}
+.desktop[data-motion-paused='true'] .machine-visual *,
+.desktop[data-motion-paused='true'] .machine-visual {
+  animation-play-state: paused;
+  transition: none;
+}
+@keyframes terminal-cursor {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  61%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes standby-fan {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-height: 780px) {
+  .machine-inspector {
+    grid-column: 1;
+    grid-row: 2 / 4;
+    min-height: 0;
+    margin: 0;
+  }
+  .inspection-caption {
+    font-size: 8px;
+    left: 7px;
+    bottom: 5px;
+  }
+}
+@media (max-width: 1000px) {
+  .taskbar > p {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .machine-visual *,
+  .machine-visual {
+    animation: none;
+    transition: none;
+  }
+  .taskbar .motion-toggle {
+    display: none;
+  }
+}
+
+.pc-case-fan,
+.pc-graphics-fan {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: standby-fan 2.4s linear infinite;
+}
+.machine-visual[data-activity='working'] .pc-graphics-fan {
+  animation-duration: 0.7s;
+}
+.machine-visual[data-view='gpu'] .pc-gpu,
+.machine-visual[data-view='cooling'] .pc-cooling {
+  filter: drop-shadow(0 0 2px #f0c88c);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pc-case-fan,
+  .pc-graphics-fan {
+    animation: none;
+  }
+}

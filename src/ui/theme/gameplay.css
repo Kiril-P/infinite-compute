@@ -1,0 +1,1237 @@
+.application-grid[data-utility='true'] {
+  grid-template-columns: minmax(0, 1fr);
+}
+.application-grid[data-utility='true'] > .window[data-active='false'],
+.window[data-utility='true'][data-active='false'] {
+  display: none;
+}
+.save-indicator {
+  margin-left: auto;
+  padding: 5px 8px;
+  font-size: 9px;
+  color: var(--mint);
+  background: #15271b;
+  border: 1px solid var(--line);
+  white-space: nowrap;
+}
+.game-button {
+  padding: 7px 10px;
+  border: 1px solid #8a9d71;
+  border-right-color: #273b24;
+  border-bottom-color: #273b24;
+  background: #334a2f;
+  color: var(--ink);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.game-button:hover:not(:disabled) {
+  background: #4c6340;
+}
+.game-button[aria-pressed='true'] {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+.primary-action {
+  color: #222a1d;
+  background: #dbbd7c;
+  border-color: #efe0aa #71613d #71613d #efe0aa;
+  font-weight: 700;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+select,
+textarea {
+  font: inherit;
+  color: var(--ink);
+  background: #101d15;
+  border: 1px solid var(--line);
+  border-radius: 0;
+}
+select {
+  padding: 4px;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  accent-color: #c9c784;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.job-workspace.gameplay-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+}
+.gameplay-workspace .machine-scene {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+}
+.job-controls {
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+.job-controls h3 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #e4debc;
+}
+.job-controls p {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.job-controls .job-facts,
+.job-controls .work-detail {
+  color: var(--muted);
+  font-size: 9px;
+}
+.job-instruction {
+  max-width: 340px;
+}
+.mode-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  color: var(--muted);
+}
+progress {
+  display: block;
+  appearance: none;
+  border: 1px solid #667650;
+  background: #0e190f;
+  width: 100%;
+  height: 9px;
+}
+progress::-webkit-progress-bar {
+  background: #0e190f;
+}
+progress::-webkit-progress-value {
+  background: #c5bc78;
+}
+progress::-moz-progress-bar {
+  background: #c5bc78;
+}
+.timing-track {
+  height: 18px;
+  position: relative;
+  background: #0c1710;
+  border: 1px solid #526448;
+  overflow: hidden;
+}
+.timing-target {
+  position: absolute;
+  inset: 1px auto 1px 38%;
+  width: 24%;
+  background: #758d56;
+  border-inline: 2px solid #d4daa6;
+}
+.timing-cursor {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #f2dab2;
+  transform: translateX(-50%);
+}
+.decision-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.bonus-result {
+  color: var(--amber);
+}
+.hardware-app .hardware-list {
+  margin-top: 0;
+}
+.hardware-purchase {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.hardware-purchase .game-button {
+  align-self: start;
+}
+.task-manager-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  min-height: 0;
+}
+.task-manager-content:not(:has(.success-message)) {
+  grid-template-columns: minmax(0, 1fr);
+}
+.task-manager-content:not(:has(.success-message)) > .task-section:last-child {
+  display: none;
+}
+.task-section,
+.settings-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: start;
+  font-size: 12px;
+  line-height: 1.5;
+  min-width: 0;
+  min-height: 0;
+}
+.task-section h3,
+.settings-section h3 {
+  color: #e3d7b6;
+  font-size: 17px;
+}
+.task-section label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.success-message {
+  color: var(--mint);
+}
+.settings-content {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.settings-pages {
+  display: flex;
+  gap: 6px;
+}
+.save-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+}
+.settings-section textarea {
+  width: 100%;
+  resize: none;
+  font-size: 10px;
+  padding: 5px;
+}
+.general-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  align-items: center;
+}
+.general-grid label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.help-section {
+  max-width: 850px;
+}
+.confirmation-dialog {
+  max-width: min(480px, 90vw);
+  padding: 24px;
+  background: #1c2e22;
+  color: var(--ink);
+  border: 2px solid var(--amber);
+  box-shadow: 7px 7px #071008;
+}
+.confirmation-dialog h3 {
+  margin-bottom: 14px;
+}
+.confirmation-dialog p {
+  line-height: 1.6;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+.confirmation-dialog::backdrop {
+  background: #000b;
+}
+.machine-visual[data-activity='working'] .pc-fan,
+.machine-visual[data-activity='benchmark'] .pc-fan {
+  animation-duration: 0.7s;
+}
+.machine-visual[data-activity='working'] .pc-drive-light,
+.machine-visual[data-activity='benchmark'] .pc-drive-light {
+  fill: #edb96d;
+  animation: drive-access 0.6s steps(2) infinite;
+}
+@keyframes drive-access {
+  50% {
+    opacity: 0.35;
+  }
+}
+@media (max-width: 1000px) and (min-height: 781px) {
+  .job-workspace.gameplay-workspace {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+  }
+  .job-controls {
+    padding: 10px 18px;
+  }
+}
+@media (max-height: 780px) {
+  .job-controls {
+    padding: 6px 10px;
+    gap: 5px;
+  }
+  .job-controls h3 {
+    font-size: 13px;
+  }
+  .job-controls p,
+  .decision-controls .game-button {
+    font-size: 9px;
+  }
+  .job-controls .job-facts,
+  .job-controls .work-detail {
+    font-size: 8px;
+  }
+  .game-button {
+    font-size: 9px;
+    padding: 5px 8px;
+  }
+  .mode-control {
+    font-size: 8px;
+    gap: 5px;
+  }
+  .hardware-purchase {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 9px;
+    gap: 3px;
+  }
+  .hardware-purchase .small-note {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+  .hardware-app .hardware-list > div {
+    padding: 4px 8px;
+  }
+  .task-section,
+  .settings-section {
+    font-size: 10px;
+    line-height: 1.4;
+    gap: 7px;
+  }
+  .task-section h3,
+  .settings-section h3 {
+    font-size: 14px;
+  }
+  .settings-content {
+    gap: 10px;
+  }
+  .general-grid {
+    gap: 12px;
+    font-size: 10px;
+  }
+}
+@media (max-height: 560px) {
+  .job-controls {
+    gap: 3px;
+    padding: 4px 8px;
+  }
+  .job-controls h3 {
+    font-size: 11px;
+  }
+  .job-controls p {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+  .timing-track {
+    height: 12px;
+  }
+  .game-button {
+    font-size: 8px;
+    padding: 4px 6px;
+  }
+  .mode-control select {
+    padding: 2px;
+  }
+  .hardware-app {
+    gap: 4px 10px;
+  }
+  .hardware-app .hardware-list > div {
+    padding: 2px 6px;
+  }
+  .hardware-list dt button {
+    padding-block: 2px;
+  }
+  .hardware-app .hardware-list {
+    gap: 3px;
+  }
+  .hardware-app .hardware-list dd {
+    font-size: 8px;
+  }
+  .hardware-purchase {
+    font-size: 8px;
+    gap: 2px;
+  }
+  .hardware-purchase .small-note {
+    font-size: 7px;
+  }
+  .task-section,
+  .settings-section {
+    font-size: 9px;
+    line-height: 1.3;
+    gap: 5px;
+  }
+  .task-section h3,
+  .settings-section h3 {
+    font-size: 11px;
+  }
+  .settings-content {
+    gap: 7px;
+  }
+  .settings-section textarea {
+    max-height: 40px;
+  }
+  .settings-section .button-row {
+    gap: 4px;
+  }
+  .general-grid {
+    gap: 7px;
+    font-size: 9px;
+  }
+}
+@media (max-width: 700px) {
+  .taskbar {
+    gap: 6px;
+    padding-inline: 4px;
+  }
+  .taskbar nav {
+    gap: 4px;
+  }
+  .taskbar button {
+    padding-inline: 6px;
+    font-size: 8px;
+  }
+  .taskbar .app-glyph {
+    display: none;
+  }
+  .taskbar .motion-toggle {
+    padding-inline: 4px;
+    font-size: 7px;
+  }
+  .save-indicator {
+    font-size: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .machine-visual[data-activity] .pc-drive-light {
+    animation: none;
+  }
+}
+
+.desktop[data-motion-paused='true'] .machine-visual * {
+  animation-play-state: paused;
+  transition: none;
+}
+
+.hardware-pages {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.chassis-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+  min-height: 0;
+}
+.chassis-grid .task-section {
+  font-size: 11px;
+  gap: 10px;
+}
+.chassis-grid .task-section h3 {
+  font-size: 15px;
+}
+@media (max-height: 780px) {
+  .chassis-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .chassis-grid .task-section {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .chassis-grid .task-section h3 {
+    font-size: 12px;
+  }
+}
+@media (max-height: 560px) {
+  .hardware-pages .game-button {
+    padding: 2px 5px;
+    font-size: 7px;
+  }
+  .chassis-grid .task-section {
+    font-size: 8px;
+    gap: 4px;
+  }
+  .chassis-grid .small-note {
+    font-size: 7px;
+  }
+}
+.desktop[data-era='home'] {
+  --ink: #d3e3ef;
+  --muted: #99b4cc;
+  --mint: #9edade;
+  --line: #476887;
+  --amber: #efc58f;
+  border-radius: 3px;
+  border-color: #7d91a1 #364353 #253643 #9fb0bd;
+  background: #243c54;
+  box-shadow:
+    inset 0 0 0 2px #172d40,
+    inset 0 0 0 5px #466278;
+}
+.desktop[data-era='home'] .os-header {
+  border-color: #5d7b93;
+}
+.desktop[data-era='home'] .global-status {
+  background: #293f52;
+}
+.desktop[data-era='home'] .window {
+  background: #243c50;
+  border-color: #83a8bf #172c3e #172c3e #83a8bf;
+}
+.desktop[data-era='home'] .window-titlebar {
+  background: linear-gradient(90deg, #265887, #527c98);
+  color: #e3ebee;
+}
+.desktop[data-era='home'] .window[data-active='true'] .window-titlebar {
+  background: linear-gradient(90deg, #246ea4, #6a9ab0);
+}
+.desktop[data-era='home'] .job-workspace,
+.desktop[data-era='home'] .machine-inspector {
+  background: #172d41;
+  border-color: #547991;
+}
+.desktop[data-era='home'] .hardware-list > div {
+  background: #172e41;
+  border-color: #64859b;
+}
+.desktop[data-era='home'] .taskbar {
+  background: #627f96;
+  border-color: #b3c5ce #304959 #304959 #b3c5ce;
+}
+.desktop[data-era='home'] .taskbar button {
+  background: #3d607d;
+  color: #e1e6df;
+  border-color: #a1b7c3 #26465d #26465d #a1b7c3;
+}
+.desktop[data-era='home'] .system-message {
+  background: #102b40;
+  border-color: #6c8eaa;
+}
+.desktop[data-era='home'] .current-objective {
+  background: #40525c;
+}
+.desktop[data-era='home'] .game-button:not(.primary-action) {
+  background: #365c7a;
+  border-color: #739bb5 #1c3c55 #1c3c55 #739bb5;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#d8ceb0'],
+.machine-visual[data-era='home'] .pc-tower [fill='#c5bd9e'] {
+  fill: #c4ced1;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#444f42'] {
+  fill: #344c60;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#beb89d'] {
+  fill: #92a5b3;
+}
+
+.machine-visual[data-era='home'] .pc-case-cover rect {
+  fill: #8196a8;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#c9c2a4'] {
+  fill: #c1cdd7;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#949983'] {
+  fill: #8196a8;
+}
+.machine-visual[data-era='home'] .pc-tower [fill='#979d84'],
+.machine-visual[data-era='home'] .pc-tower [fill='#b2b59a'] {
+  fill: #758a9c;
+}
+@media (max-height: 560px) {
+  .job-workspace.gameplay-workspace {
+    grid-template-rows: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+  .job-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 3px 6px;
+    min-height: 0;
+    align-content: center;
+  }
+  .job-controls h3 {
+    font-size: 9px;
+  }
+  .job-controls .job-facts {
+    text-align: right;
+    font-size: 7px;
+  }
+  .job-controls .work-detail {
+    font-size: 7px;
+  }
+  .job-controls progress {
+    height: 7px;
+    align-self: center;
+  }
+  .job-controls .boost-button {
+    font-size: 7px;
+    padding: 2px 4px;
+  }
+  .job-controls .timing-track {
+    height: 16px;
+    align-self: center;
+  }
+  .job-controls .decision-controls,
+  .job-controls .bonus-result,
+  .job-controls .job-instruction,
+  .job-controls .primary-action,
+  .job-controls > .small-note {
+    grid-column: 1 / -1;
+  }
+  .job-controls .decision-controls p {
+    font-size: 7px;
+  }
+  .job-controls .decision-controls {
+    gap: 3px;
+  }
+  .job-controls .decision-controls .game-button {
+    font-size: 7px;
+    padding: 2px 5px;
+  }
+  .job-controls .mode-control {
+    flex-direction: column;
+    gap: 1px;
+    align-items: start;
+    font-size: 7px;
+  }
+  .job-controls .mode-control select {
+    font-size: 7px;
+    min-width: 0;
+    width: 100%;
+  }
+  .job-controls > .small-note {
+    font-size: 7px;
+  }
+}
+
+.home-task-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  min-height: 0;
+}
+.memory-path {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 11px;
+}
+.memory-path span {
+  background: #14314b;
+  border: 1px solid #6e96ae;
+  padding: 12px;
+}
+.batch-choices,
+.batch-choices > div {
+  display: grid;
+  gap: 6px;
+}
+.batch-choices > div {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.batch-choices .game-button {
+  font-size: 8px;
+  padding: 5px;
+}
+@media (max-height: 780px) {
+  .memory-path {
+    font-size: 9px;
+    gap: 6px;
+    margin-top: 6px;
+  }
+  .memory-path span {
+    padding: 6px;
+  }
+}
+@media (max-height: 560px) {
+  .home-task-grid {
+    gap: 14px;
+  }
+  .memory-path {
+    font-size: 7px;
+    gap: 4px;
+    margin-top: 3px;
+  }
+  .memory-path span {
+    padding: 4px;
+  }
+  .job-controls .batch-choices {
+    grid-column: 1 / -1;
+    gap: 3px;
+  }
+  .batch-choices .game-button {
+    font-size: 7px;
+    padding: 2px 4px;
+  }
+}
+
+.graphics-app {
+  display: grid;
+  grid-template-columns: minmax(80px, 0.7fr) minmax(0, 1.3fr);
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+.graphics-app .machine-inspector {
+  grid-row: auto;
+  min-height: 0;
+}
+.graphics-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  min-width: 0;
+}
+.graphics-readout {
+  color: var(--amber);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-height: 780px) {
+  .graphics-app {
+    gap: 10px;
+  }
+  .graphics-controls {
+    gap: 5px;
+    font-size: 11px;
+  }
+  .graphics-controls h3 {
+    font-size: 13px;
+  }
+}
+@media (max-height: 560px) {
+  .graphics-controls {
+    gap: 3px;
+    font-size: 10px;
+  }
+  .graphics-controls .game-button {
+    padding: 4px 7px;
+    font-size: 9px;
+  }
+  .graphics-controls .small-note {
+    font-size: 9px;
+  }
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 28px;
+  flex: 1;
+  min-height: 0;
+}
+.software-offer,
+.software-account {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  min-width: 0;
+}
+.software-editions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.software-editions > div {
+  padding: 12px;
+  border: 1px solid var(--line);
+  background: #183247;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.software-editions .game-button {
+  margin-top: auto;
+}
+.shop-content h4 {
+  margin: 0;
+  font-size: 12px;
+  color: var(--amber);
+}
+.promotional-score {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+@media (max-width: 1000px), (max-height: 780px) {
+  .shop-content {
+    gap: 18px;
+    font-size: 11px;
+  }
+  .software-offer,
+  .software-account {
+    gap: 10px;
+  }
+  .shop-content h3 {
+    font-size: 14px;
+  }
+  .software-editions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .software-editions > div {
+    padding: 8px;
+    gap: 5px;
+  }
+  .shop-content .game-button {
+    font-size: 9px;
+    padding: 6px;
+  }
+  .promotional-score {
+    padding-top: 8px;
+    gap: 6px;
+  }
+}
+@media (max-height: 560px) {
+  .shop-content {
+    gap: 14px;
+    font-size: 9px;
+  }
+  .software-offer,
+  .software-account {
+    gap: 4px;
+  }
+  .software-editions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+  .software-editions > div {
+    padding: 5px;
+    gap: 3px;
+  }
+  .shop-content h3 {
+    font-size: 11px;
+  }
+  .shop-content h4 {
+    font-size: 9px;
+  }
+  .shop-content .game-button,
+  .shop-content .small-note {
+    font-size: 8px;
+  }
+  .shop-content .game-button {
+    padding: 3px 5px;
+  }
+  .promotional-score {
+    gap: 3px;
+    padding-top: 5px;
+  }
+}
+
+.score-page {
+  display: grid;
+  align-items: center;
+  max-width: 760px;
+  flex: 1;
+  min-height: 0;
+}
+.score-page .promotional-score {
+  border: 1px solid var(--line);
+  padding: 18px;
+}
+.score-page h4 {
+  margin: 0;
+  color: var(--amber);
+}
+@media (max-height: 560px) {
+  .shop-content .app-subtitle {
+    display: none;
+  }
+  .shop-content .button-row {
+    gap: 4px;
+  }
+  .score-page {
+    font-size: 10px;
+  }
+  .score-page .promotional-score {
+    padding: 8px;
+  }
+  .score-page .game-button {
+    padding: 4px 8px;
+  }
+}
+
+.archive-app {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  gap: 12px;
+}
+.archive-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 28px;
+  flex: 1;
+  min-height: 0;
+  align-items: center;
+}
+.archive-entry,
+.archive-directive {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.archive-directive {
+  padding: 18px;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+}
+.archive-pagination {
+  align-items: center;
+  margin-top: 12px;
+  font-size: 10px;
+}
+@media (max-height: 780px), (max-width: 1000px) {
+  .archive-content {
+    gap: 16px;
+    font-size: 11px;
+  }
+  .archive-content h3 {
+    font-size: 14px;
+  }
+  .archive-entry,
+  .archive-directive {
+    gap: 10px;
+  }
+  .archive-directive {
+    padding: 10px;
+  }
+}
+@media (max-height: 560px) {
+  .software-offer,
+  .software-account {
+    gap: 3px;
+  }
+  .archive-app {
+    gap: 6px;
+  }
+  .archive-content {
+    font-size: 9px;
+    gap: 10px;
+  }
+  .archive-content h3 {
+    font-size: 11px;
+  }
+  .archive-entry,
+  .archive-directive {
+    gap: 5px;
+  }
+  .archive-directive {
+    padding: 6px;
+  }
+  .archive-pagination {
+    gap: 4px;
+    margin-top: 2px;
+    font-size: 8px;
+  }
+  .archive-pagination .game-button {
+    font-size: 8px;
+    padding: 3px 5px;
+  }
+  .archive-content .small-note {
+    font-size: 8px;
+  }
+}
+
+@media (max-height: 560px) {
+  #shop .window-body {
+    gap: 5px;
+  }
+  .software-offer,
+  .software-account {
+    line-height: 1.25;
+  }
+  .archive-content {
+    line-height: 1.3;
+  }
+  .archive-entry,
+  .archive-directive {
+    gap: 4px;
+  }
+  .archive-pagination {
+    margin-top: 0;
+  }
+}
+
+@media (max-height: 560px) {
+  .archive-entry .app-subtitle {
+    display: none;
+  }
+}
+
+/* Workstation: a lab console, with the two workloads kept visible. */
+.desktop[data-era='workstation'] {
+  --accent: #b7b69a;
+  --ink: #ddd8c7;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 79px, #7180770d 80px),
+    #222d31;
+}
+.desktop[data-era='workstation'] .os-header,
+.desktop[data-era='workstation'] .taskbar {
+  background: #313f43;
+}
+.desktop[data-era='workstation'] .global-status {
+  background: #293b3d;
+  border-color: #748682;
+}
+.desktop[data-era='workstation'] .window {
+  border-color: #7b908d;
+  background: #1e2c30;
+}
+.desktop[data-era='workstation'] .window-titlebar {
+  background: #3c5053;
+}
+.desktop[data-era='workstation'] .window[data-active='true'] .window-titlebar {
+  background: #526b6c;
+}
+.desktop[data-era='workstation'] .job-workspace,
+.desktop[data-era='workstation'] .machine-inspector {
+  background: #263a3d;
+}
+.desktop[data-era='workstation'] .system-message {
+  background: #242d32;
+}
+.machine-visual[data-era='workstation'] .pc-case-cover rect {
+  fill: #35464c;
+}
+.machine-visual[data-era='workstation'] .pc-tower [fill='#c9c2a4'] {
+  fill: #839497;
+}
+.machine-visual[data-era='workstation'] .pc-tower [fill='#d8ceb0'],
+.machine-visual[data-era='workstation'] .pc-tower [fill='#c5bd9e'] {
+  fill: #acb5ac;
+}
+.machine-visual[data-era='workstation'] .pc-tower [fill='#beb89d'] {
+  fill: #52656b;
+}
+.research-app {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 16px;
+  min-height: 0;
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  min-height: 0;
+}
+.research-app select {
+  max-width: 100%;
+}
+.research-budget progress {
+  width: 100%;
+}
+.tuning-switches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tuning-switches label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.allocation-bar {
+  height: 12px;
+  background: #79a897;
+  border: 1px solid #afc4b5;
+}
+.allocation-bar span {
+  display: block;
+  height: 100%;
+  background: #c9a769;
+}
+.machine-visual[data-activity='working'] .lab-packet {
+  animation: lab-packet 1.2s steps(4) infinite;
+}
+.machine-visual[data-researching='true'] .lab-research-node {
+  animation: lab-node 2.4s steps(3) infinite;
+}
+@keyframes lab-packet {
+  50% {
+    transform: translateX(12px);
+    opacity: 0.35;
+  }
+}
+@keyframes lab-node {
+  50% {
+    fill: #d7c192;
+    stroke-width: 3;
+  }
+}
+.desktop[data-motion-paused='true'] .lab-packet,
+.desktop[data-motion-paused='true'] .lab-research-node {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .machine-visual .lab-packet,
+  .machine-visual .lab-research-node {
+    animation: none !important;
+  }
+}
+@media (max-height: 560px) {
+  .research-app {
+    gap: 6px;
+  }
+  .research-grid {
+    gap: 12px;
+  }
+  .research-app .task-section {
+    gap: 4px;
+    font-size: 9px;
+  }
+  .research-app .small-note {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+  .research-app .game-button {
+    padding: 4px 7px;
+  }
+  .research-app select {
+    font-size: 9px;
+    padding: 3px;
+  }
+}
+@media (max-width: 700px) {
+  .desktop[data-era='workstation'] .taskbar button {
+    font-size: 7px;
+    padding-inline: 4px;
+  }
+}
+
+.research-app .task-section > label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+.research-app .task-section > label select {
+  width: 100%;
+  min-width: 0;
+}
+
+.workstation-tasks {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 16px;
+  min-height: 0;
+}
+.operations-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  min-height: 0;
+}
+.operations-grid .task-section > label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+}
+.operations-grid select {
+  width: 100%;
+  min-width: 0;
+}
+.operations-grid progress {
+  width: 100%;
+}
+.thermal-window {
+  display: grid;
+  gap: 8px;
+  border-top: 1px solid #617d78;
+  padding-top: 8px;
+}
+.thermal-window select {
+  font-size: 9px;
+}
+.machine-visual[data-era='workstation'] .pc-fan,
+.machine-visual[data-era='workstation'] .pc-case-fan,
+.machine-visual[data-era='workstation'] .pc-graphics-fan {
+  animation-duration: var(--fan-duration);
+}
+.machine-visual[data-fan-curve='true'] .pc-case-fan {
+  stroke: #c5d4bb;
+  stroke-width: 0.5px;
+}
+@media (max-height: 560px) {
+  .workstation-tasks {
+    gap: 6px;
+  }
+  .operations-grid {
+    gap: 14px;
+  }
+  .operations-grid .small-note {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+  .operations-grid select {
+    font-size: 8px;
+    padding: 3px;
+  }
+  .job-controls .thermal-window {
+    grid-column: 1 / -1;
+    gap: 3px;
+    padding-top: 3px;
+  }
+  .thermal-window .button-row {
+    gap: 4px;
+  }
+  .thermal-window .game-button,
+  .thermal-window select {
+    font-size: 7px;
+    padding: 2px 4px;
+  }
+}
+
+.allocation-bar {
+  flex-shrink: 0;
+}
+@media (max-height: 560px) {
+  .workstation-tasks .task-section {
+    gap: 4px;
+  }
+  .workstation-tasks .task-section .small-note {
+    font-size: 8px;
+    line-height: 1.3;
+  }
+}

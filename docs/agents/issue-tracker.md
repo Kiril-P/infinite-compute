@@ -12,6 +12,23 @@ Issues and specs for this repository live as Markdown files in `.scratch/` and a
 - Put blocking ticket numbers in a `Blocked by:` line.
 - Append discussion under `## Comments` rather than rewriting the originating request.
 
+## Implementation execution state
+
+`Status` retains the five canonical triage roles from [triage-labels.md](triage-labels.md). Use a separate `Execution` field on implementation tickets:
+
+| Execution | Meaning |
+| --- | --- |
+| `not-started` | No implementation has begun; this is the default for older tickets missing the field. |
+| `in-progress` | An agent owns the active slice; record its task identifier when available. |
+| `paused` | Work is incomplete and checkpointed with a stop reason, resume condition, and exact next action. |
+| `complete` | All ticket acceptance criteria and required verification passed, and canonical docs/continuity match. |
+
+A dependency is complete only when its `Execution` and evidence establish completion. Select a `ready-for-agent` ticket whose dependencies are complete and whose execution is not complete; resume paused work only after its recorded resume condition holds. Read a ticket's latest checkpoint before claiming it. A resource pause is not a request for missing product information.
+
+Follow [build-loop.md](build-loop.md) for claiming, verification, completion, usage/context checks, and checkpoint fields. Preserve originating ticket text; update mutable execution metadata and append progress under `## Comments`. Keep the latest checkpoint compact and readily identifiable.
+
+The Wayfinding decision statuses below apply only to those research/prototype/decision children. They do not replace implementation `Status` or `Execution`.
+
 ## Skill operations
 
 When a skill says to publish a specification or ticket, create the corresponding file under `.scratch/<feature-slug>/`. When a skill asks for an issue, read the referenced file rather than inferring its contents from the roadmap.

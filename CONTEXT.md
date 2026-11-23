@@ -21,12 +21,24 @@ A deterministic Era gate that temporarily changes one familiar rule, tests the c
 _Avoid_: Boss, random event, minigame
 
 **Impossible Question**:
-The unresolved question about existence that motivates the computer's long-term pursuit of infinite computing power.
+The inherited, incompletely specified request to explain existence that drives the computer's pursuit of infinite computing power. Its missing definition is part of the story, not a hidden puzzle answer the player must guess.
 _Avoid_: Final quest, win condition
 
+**Infinite Compute**:
+The machine's ambition to remove every computational limit in pursuit of the Impossible Question. It names the aspiration, not an attainable quantity or spendable resource.
+_Avoid_: Infinity currency, maximum hardware tier
+
+**Chapter**:
+A major section of the complete story containing one or more Eras and a distinct change in the machine's understanding of its purpose.
+_Avoid_: Era, prestige layer
+
 **V1 Ending**:
-The first data-center supercomputer benchmark and the realization that its Compute is still negligible relative to the Impossible Question.
+The first data-center supercomputer Benchmark and the discovery that no completion estimate can be defined for the Impossible Question.
 _Avoid_: Final answer, game completion
+
+**Final Answer**:
+The result, 42, returned by the fictional calculation at the end of the full game. It is a verified output within the supplied model whose significance remains undefined without a meaningful question.
+_Avoid_: Meaning currency, universal proof
 
 ## Economy
 
@@ -43,12 +55,20 @@ A later spendable resource representing new knowledge and used for breakthroughs
 _Avoid_: Science, knowledge points
 
 **Compute**:
-The computer's derived processing capability, used to determine Job speed and eligibility rather than spent as currency in v1.
+The computer's derived processing capability, used to determine Job speed and eligibility rather than spent as currency. Aggregate capacity and capability available to a particular Job can differ.
 _Avoid_: Processing currency, FLOPs points
 
 **Bottleneck**:
-A visible condition in which memory, temperature, power, or bandwidth reduces effective Compute below raw Compute.
+A visible constraint such as memory, temperature, power, communication, or serial work that limits useful Job throughput.
 _Avoid_: Debuff, failure
+
+**Fabrication**:
+Post-v1 construction output spent to build physical infrastructure, distinct from Cash paid for commercial procurement and Research spent on knowledge.
+_Avoid_: Space Cash, matter points
+
+**Capacity**:
+A reusable physical limit, such as available power, radiator throughput, or installed construction capacity, that constrains concurrent work without being spent like currency.
+_Avoid_: Currency, consumable stock
 
 ## Interaction
 
@@ -86,6 +106,14 @@ _Avoid_: Hardware, spell
 The interface, narrator, and developing protagonist through which every game system and story beat is presented.
 _Avoid_: Assistant, player character, HUD
 
+**Sandbox World**:
+A finite simulated reality hosted by the computer, with inhabitants, an authored history, and observable outcomes. Its discoveries can inform the host while its existence consumes the host's resources.
+_Avoid_: Free universe generator, physical computing site
+
+**OS Fork**:
+A continuing branch of the Operating System whose experiences and opinions diverge from its shared origin. A fork can speak for its own history without replacing the original machine or establishing an objectively superior identity.
+_Avoid_: Player avatar, prestige reset, disposable duplicate
+
 ## Narrative
 
 **Announcement**:
@@ -95,3 +123,7 @@ _Avoid_: Dialogue, lore dump
 **System Message**:
 A short statement from the Operating System about its state, observations, or developing understanding.
 _Avoid_: Announcement, narrator caption
+
+**Question Archive**:
+The machine's preserved record of its original directive, later assumptions, and observations about purpose. It provides optional narrative context while essential discoveries also appear through ordinary play.
+_Avoid_: Quest log, collectible lore currency

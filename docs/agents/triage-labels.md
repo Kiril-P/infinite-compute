@@ -9,3 +9,5 @@
 | `wontfix` | `wontfix` | The ticket will not be actioned. |
 
 Use the local status exactly as written so triage and implementation skills share one vocabulary.
+
+These roles describe triage readiness, not implementation progress. Implementation tickets use the separate `Execution` field defined in [issue-tracker.md](issue-tracker.md); usage/context interruptions set execution to `paused` and preserve a resumable checkpoint.

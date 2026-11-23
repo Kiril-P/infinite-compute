@@ -77,10 +77,20 @@ Each Era should follow this control-compression arc:
 
 > Perform → understand → automate → configure → compress → face a new decision.
 
-Each Era ends with a deterministic Benchmark that changes one familiar rule, exposes the current Bottleneck, and awards an automation or policy improvement related to what the player demonstrated. This captures the strongest shared lesson without copying the games' scale, content, or reset structures.
+Each Era has a deterministic Benchmark that changes one familiar rule, exposes the current Bottleneck, and awards an automation or policy improvement related to what the player demonstrated. Its exact placement follows current pacing: Safe Mode Payroll precedes the Home-PC Transition so basic auto-run can arrive at 3–5 minutes. This captures the strongest shared lesson without copying the games' scale, content, or reset structures.
 
 ## Agentic repository guidance
 
 OpenAI documents that Codex reads repository `AGENTS.md` before work and combines instructions from the Git root toward the current directory. This repository therefore keeps stable, concise rules in the root file and detailed source-of-truth context under `docs/`.
 
 Source: [Official OpenAI documentation for AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
+
+## Full-game foundations and audit
+
+[Full-game physical foundations](research/FULL_GAME_FOUNDATIONS.md) records primary-source research into serial work, communication latency, spacecraft heat rejection, erasure costs, quantum specialization, and finite computation limits. Each finding separates scientific evidence from invented engineering and game simplification. [FULL_GAME.md](FULL_GAME.md) applies those constraints to later Chapters; the result 42 and its interpretation remain authored fiction.
+
+The earlier comparative reports are dated research artifacts, not current specifications. Their recommendations about first-Benchmark timing, prestige, or an effectively-zero ending gauge are superseded where they conflict with D-014 through D-019 and the canonical design. [PLAN_AUDIT.md](PLAN_AUDIT.md) records the reconciliation.
+
+## Rick and Morty creative reference
+
+The user requested substantial conceptual influence and general references. [The cosmic-absurdity treatment](content/COSMIC_ABSURDITY.md) records the original adaptation ideas and links to checked official Adult Swim clip pages for nested simulations, task helpers, alternate selves, mundane machine purpose, society-building, continuity, and strange broadcasts. Those listings ground reference names; they are not full episode analyses. The proposed stories and mechanics are original design work, and physical claims still follow the separate foundations report.

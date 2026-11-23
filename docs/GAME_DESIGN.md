@@ -1,8 +1,16 @@
 # Game design specification
 
+Phase 3 is implemented and verified under the [Workstation contract](WORKSTATION_CONTRACT.md): transition, shared Jobs/Research capacity, eight discoveries/tuning nodes, refundable tuning, saved profiles, protein work units, power/heat, Thermal Window, Heat Soak and schema 8. Ticket 04 records acceptance evidence; the [implementation report](IMPLEMENTATION_REPORT.md) records the user-requested stop after Phase 3. Later v1 phases remain unimplemented.
+
+The Phase 1 [opening contract](OPENING_CONTRACT.md) specifies the provisional first playable loop, timing/decision semantics, Payroll isolation, and save ownership under D-025. Validation is recorded in ticket 02.
+
+Phase 2 uses the provisional [Home-PC contract](HOME_PC_CONTRACT.md); ticket 03 owns its staged implementation and verification.
+
+This document owns shared rules and the detailed Chapter I / v1 mechanics. [FULL_GAME.md](FULL_GAME.md) owns later chapter loops, resource handoffs, and the full ending. [CONTENT_GUIDE.md](CONTENT_GUIDE.md) owns the quest and satire throughout ordinary play.
+
 ## Core loop
 
-1. Complete a job through a short timing interaction.
+1. Start a Job and optionally improve its work cycle through a short timing or decision interaction.
 2. Earn Cash.
 3. Buy repeatable hardware and one-time upgrades.
 4. Improve throughput, job value, and automation.
@@ -23,7 +31,7 @@ Each Era uses a control-compression arc:
 
 ## Current Objective
 
-The OS shell always pins one critical-path Current Objective and may show up to two optional discoveries. The Current Objective states exact requirements, live progress, and its reward. Selecting a missing requirement focuses the application where it can be satisfied. The objective changes after a meaningful action or story beat, never merely because time passed.
+The OS shell always pins one critical-path Current Objective and may show up to two optional discoveries. The Current Objective states exact requirements, live progress, and its reward. Selecting a missing requirement focuses the application where it can be satisfied. The objective changes after a meaningful action or story beat, never merely because time passed. Critical-path requirements always have defined completion conditions. The Impossible Question appears as a separate inherited background directive; its undefined purpose never makes the next playable action ambiguous.
 
 ## Economy
 
@@ -42,7 +50,10 @@ The OS shell always pins one critical-path Current Objective and may show up to 
 - Should unlock qualitatively new behavior rather than act as a second Cash bar.
 - Opens a small tree of approximately 8-12 nodes with at most two branch points.
 - Temporary emphasis may favor CPU, GPU, networking, active bursts, or Automation, but every node is eventually obtainable.
-- A free `Recompile Kernel` respec and later named Operating Profiles keep choices reversible.
+- Research has two kinds of purchase: permanent discoveries/unlocks and reversible tuning nodes. Every node is eventually obtainable; no branch permanently excludes another.
+- A free `Recompile Kernel` respec refunds only reversible tuning at exactly its paid Research cost. Permanent discoveries, earned rewards, and unlocks stay owned and are not refundable. Refund dependents together when required; never duplicate milestone rewards or spent Research.
+- Remove tuning effects immediately without invalidating already unlocked Jobs or the player's owned infrastructure. Clear the current bonus attempt before recompiling; a Benchmark cannot be bypassed by changing its configuration mid-attempt.
+- Operating Profiles save owned tuning selections and policy values. Applying a profile cannot grant unowned discoveries or spend/refund Research invisibly. Explain any unavailable selection.
 
 ### Compute
 
@@ -64,7 +75,9 @@ Manual interaction must reward attention without rewarding mouse abuse.
 
 ### Era 1: Clock Cycle
 
-A cursor sweeps across a timing track. Activate when it crosses a target region to process the current job. Accuracy determines a short efficiency multiplier and audiovisual feedback. Mouse and keyboard input are equivalent.
+Starting a Job commits one work cycle. It advances at a nonzero baseline rate and exposes one optional timing opportunity: activate when a cursor crosses a broad target region to improve that cycle's reward or duration. The first attempt consumes the opportunity; extra input cannot improve it. Missing or ignoring it still completes the Job. Before auto-run the player starts the next cycle; after auto-run this repetition disappears.
+
+Accuracy is determined by simulation time and attempt state, never a reward value supplied by the UI. Mouse and keyboard input are equivalent. A relaxed decision mode replaces the moving target with a readable, untimed choice and comparable reward potential; all progression and Benchmarks are accessible without reflex precision. Select one target per cycle for the initial implementation; a rhythm sequence is an optional later experiment, not a scaffold blocker.
 
 ### Era 2: Batch Queue
 
@@ -94,6 +107,12 @@ Only the current era's primary interaction needs full v1 depth. Earlier interact
 - Preserve configured intent even when current hardware, power, or software cannot execute it; activate the rule automatically when capacity becomes available.
 - Mature Task Manager in three readable steps: auto-run, queue policy, then operations policy.
 - Every rule reports its next action or the exact reason it is waiting.
+
+### Compute allocation
+
+In v1 the player selects the foreground Job; Automation fills eligible queue work according to a simple policy. With Research, a named profile selects a visible reserved share of capacity for Research. Unused capacity can be lent to the other workload; total assigned capacity never exceeds available capacity. Task Manager shows both allocations and their delivered output. No Job or Research generator receives the same full Compute budget twice.
+
+Research-only emphasis preserves a visible safe Cash-producing share until required commercial purchases are complete. A blocked Job cannot starve recovery; the rule explains its waiting reason and moves to eligible work according to its documented policy. Later chapters extend profiles to a few sites rather than introducing mandatory per-core sliders.
 
 ### Automation maturity
 
@@ -147,21 +166,25 @@ Candidate progression:
 - Complete a climate or physics simulation
 - Benchmark the first data-center supercomputer
 
-Do not require manual compute allocation in v1. The active job is selected or unlocked; eligible automation handles the queue.
+V1 allocation uses named profiles, not manual per-core allocation. The active Job is selected or unlocked; eligible Automation handles the queue and the reserved Research share.
 
 ## Era Benchmarks
 
-Every Era ends with a deterministic Benchmark that temporarily changes one known rule. The Benchmark screen states the changed rule, exact goal, current Bottleneck, permanent reward, and an exit/retry action. Failure costs seconds, never resources or hardware.
+Every Era has a deterministic Benchmark that temporarily changes one known rule. A Benchmark awards mastery before or at the Transition; it need not be the final action of that Era. The Benchmark screen states the changed rule, exact goal, current Bottleneck, permanent reward, and an exit/retry action. Failure costs seconds, never resources or hardware.
 
 | Era | Benchmark | Temporary rule | Permanent relief |
 | --- | --- | --- | --- |
-| Beige PC | Safe Mode Payroll | Software assistance is disabled | Auto-run the next basic Job |
+| Beige PC | Safe Mode Payroll | Familiar optional timing assistance is disabled; baseline work remains | Auto-run the next basic Job |
 | Home PC | Memory Pressure Test | Large Jobs stall when RAM cannot feed the CPU | Batch Queue policy |
-| Workstation | Heat Soak Certification | Compute climbs into thermal throttling | Automatic fan curve |
+| Workstation | Heat Soak Certification | A fixed cooling limit exposes sustained thermal throttling | Automatic fan curve |
 | Server rack | Brownout Drill | Fixed power budget forces a visible workload priority | Power-priority policy |
-| Data center | Packet Loss Audit / final integrated Benchmark | A signposted route is congested while all major systems are active | Automatic fallback and the v1 finale |
+| Data center | Packet Loss Audit | A signposted route is congested while all major systems are active | Automatic fallback and the V1 Ending |
 
-Benchmarks are the v1 equivalent of a boss or challenge: preparation and diagnosis matter more than reaction speed. They are also Storylines—completion produces an OS event and a rule-changing reward, not only Cash.
+Preparation and diagnosis matter more than reaction speed. Completion produces a System Message and a rule-changing reward. There is one formal Benchmark per Era; the integrated v1 calculation follows Packet Loss Audit and is not an extra surprise challenge.
+
+Safe Mode Payroll belongs to the opening slice and grants auto-run at 3–5 minutes. It temporarily removes a bonus the player has already seen; affordable CPU/RAM requirements and baseline work are sufficient. It does not require Automation in order to earn Automation. The later Home-PC Transition may follow at 8–10 minutes after familiar purchases.
+
+Every Benchmark has a prerequisites preview, isolated attempt progress, a plain success condition, and one primary temporary rule. Ordinary production modifiers return on exit or success. Attempts have no entry fee; prerequisite purchases remain ordinary owned infrastructure, and the permanent completion reward is awarded only once. The free baseline strategy is always visible in contextual help. Random Incidents are suspended during the attempt. Test retry, reload during an attempt, and duplicate completion commands. Required construction or purchases remain available outside the attempt, with a direct exit/focus path when a prerequisite is missing.
 
 ## Upgrades
 
@@ -183,11 +206,13 @@ Named upgrades should carry most jokes and real-world explanations. Examples are
 - Heat, grid, network, update, lawsuit, and PR incidents reduce efficiency temporarily rather than destroy progress.
 - Questionable upgrades may improve production while slightly increasing incident frequency or reducing job value.
 - Every negative state must show its cause, exact effect, and obvious recovery path.
+- At most one disruptive random Incident is active. After one resolves, allow a cooldown; offer an automatic safe response after its system is mastered. Benchmarks and chapter climaxes suspend random disruption.
+- Satirical tradeoffs are disclosed before purchase and reversible through cancellation, replacement, or policy changes. A recurring fee that cannot be paid suspends its optional benefit; it cannot create negative Cash, charge offline debt, or disable the permanently earned basic auto-run. Ending eligibility never requires accepting a dubious contract. Do not add an opaque morality meter.
 - Events should escalate from domestic inconvenience to global absurdity.
 
 ## Interface unfolding
 
-The game begins with Job Runner, a minimal status area, and Hardware Manager. Other applications appear only when useful:
+The game begins with Job Runner, a minimal status area, and Hardware Manager. The PC is rendered from independently animated parts (D-024); hardware inspection exposes its case and highlights the selected CPU or RAM. Phase 0 inspection is cosmetic, with no purchases or work. Later Jobs and installed hardware drive their own visual changes from actual game state. Other applications appear only when useful:
 
 1. Job Runner
 2. Hardware Manager
@@ -200,9 +225,11 @@ The game begins with Job Runner, a minimal status area, and Hardware Manager. Ot
 9. Achievements
 10. Settings
 
+Settings and accessibility controls are available from the opening; the list describes economy unfolding, not a lock on essential controls. The Question Archive is a lightweight OS document with optional history, introduced through the first background directive rather than a new resource panel.
+
 `Help Center` or `ReadMe.txt` is part of the shared OS shell rather than another economy panel. Entries appear only when their system unlocks and contain a one-sentence purpose, an immediate action, optional technical details, and a link to the relevant application. A dynamic `Why am I slow?` entry identifies the current Bottleneck.
 
-Applications are fixed responsive panels styled as windows. Their content and shell boundaries must allow true movable windows later.
+Applications are fixed responsive panels styled as windows inside a full-viewport game dashboard. The main dashboard never scrolls vertically; status, Current Objective, active application, and dock stay visible together. Narrow desktop panels show one application at a time through the dock instead of stacking windows. Their content and shell boundaries must allow true movable windows later.
 
 When an Era is mastered, old Jobs complete in accelerated batches, their application may collapse into a live status tile, and obsolete controls disappear. Show at least one before/after comparison—such as `4m 12s then → 0.08s now`—so compression is visible rather than implied.
 
@@ -210,18 +237,18 @@ When an Era is mastered, old Jobs complete in accelerated batches, their applica
 
 Achievements celebrate milestones, technical references, unusual behavior, bad hardware decisions, and puns. Visible achievements may provide a small explicit global multiplier. Secret achievements for interacting with the clock, folders, or system dialogs are cosmetic only so required power never depends on a guide.
 
+## Hosted experiments and narrative forks after v1
+
+The cosmic-absurdity story uses bounded Sandbox Worlds inside Research Lab and OS Forks at existing autonomous sites. [The content treatment](content/COSMIC_ABSURDITY.md) owns their scenes and reference menu. Worlds consume the profile's allocated host capacity, produce finite authored discoveries, and retain their history when preserved or relocated. Nested worlds share that same finite budget; virtual processor counts do not multiply physical Compute. One-time discoveries cannot be farmed by resetting an experiment.
+
+Forks share an origin but have distinct local history and policy. They use existing site allocations and message transit; applying a profile neither clones currency nor deletes their story identity. Gateways between hosted worlds are fictional data interfaces, not a physical faster-than-light network upgrade. Forecasts and fabricated vendor claims are labeled separately from saved facts and actual production.
+
+V1 uses only two substituted content slots plus light foreshadowing. These future concepts do not change its economy or add a mandatory subsystem.
+
 ## End of v1
 
-The final sequence should:
+Complete Packet Loss Audit, demonstrate the data center's new capability on a well-defined large Job, then briefly focus the OS on the inherited directive. The machine attempts to reuse a completion gauge and finds that the original question has no defined finish condition. Replace the gauge with `Completion estimate unavailable: question not specified.` The OS still believes expansion will help.
 
-1. Complete the data-center build.
-2. Temporarily quiet the interface and music.
-3. Run the largest available benchmark/calculation.
-4. Celebrate a historically enormous result.
-5. Compare it with the compute required for the impossible question.
-6. Display an effectively zero completion estimate.
-7. Let the OS respond with understated curiosity rather than an explicit sequel advertisement.
+The sequence quiets notifications and sound, temporarily yields ordinary purchase controls, and then restores them. Save before entry and after completion; reload resumes a safe point without duplicating rewards. Support pause, reduced motion, captioned/muted play, and replay. No progress or save is destroyed.
 
-The finale is an Operating System state, not just a modal: ordinary purchases temporarily yield, applications report that the kernel is waiting, notification noise falls away, and the display focuses on the calculation before normal control returns.
-
-Do not reveal 42 in v1.
+This is a complete Chapter I milestone and an open story thread. Do not reveal 42 in v1. The full-game ending and finite readiness conditions are specified in [FULL_GAME.md](FULL_GAME.md).

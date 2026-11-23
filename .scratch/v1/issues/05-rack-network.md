@@ -2,6 +2,7 @@
 
 Type: task
 Status: ready-for-agent
+Execution: not-started
 Blocked by: 04
 
 ## Outcome
@@ -16,3 +17,5 @@ Build the rack Transition, Network application, bandwidth and remote Jobs, Packe
 - Earlier chores need no repeated attention after the Transition.
 
 ## Comments
+
+Planning audit, 2026-09-07: remote Jobs expose processing and transfer separately; bandwidth does not penalize unrelated local work. Suspend disruptive randomness in Benchmarks and prevent Incident stacking. Preserve a viable ordinary-contract route and one normal-play quest beat.
